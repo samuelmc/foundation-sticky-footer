@@ -1,0 +1,25 @@
+{
+  "name": "foundation-sticky-footer",
+  "homepage": "https://github.com/samuelmc/foundation-sticky-footer",
+  "authors": [
+    "Samuel Moncarey <samuel.moncarey1991@gmail.com>"
+  ],
+  "description": "Sticky Footer plugin for Foundation sites 6",
+  "main": "",
+  "keywords": [
+    "foundation",
+    "sticky",
+    "footer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "package.json",
+    "gulpfile.js",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.3"
+  }
+}
