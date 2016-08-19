@@ -5,7 +5,7 @@
     "Samuel Moncarey <samuel.moncarey1991@gmail.com>"
   ],
   "description": "Sticky Footer plugin for Foundation sites 6",
-  "main": "",
+  "main": ["src/js/foundation.stickyFooter.js","src/scss/plugin/_sticky-footer.scss"],
   "keywords": [
     "foundation",
     "sticky",
