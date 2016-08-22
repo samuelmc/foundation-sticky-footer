@@ -4,17 +4,17 @@
 
     class StickyFooter {
 
-        constructor(footer, options) {
-            this.$footer = footer;
+        constructor(element, options) {
+            this.$element = element;
 
-            if (!this.$footer.is('footer')) {
+            if (!this.$element.is('footer')) {
                 console.warn('Sticky footer must be initialized on a footer element.')
             }
-            if (!this.$footer.parent().is('body')) {
-                console.warn('The sticky footer must be directly in the body tag')
+            if (!this.$element.parent().is('body')) {
+                console.warn('The sticky footer must be placed directly in the body tag.')
             }
 
-            this.options = $.extend({}, StickyFooter.defaults, this.$footer.data(), options);
+            this.options = $.extend({}, StickyFooter.defaults, this.$element.data(), options);
             this._init();
 
             Foundation.registerPlugin(this, 'StickyFooter');
@@ -36,8 +36,8 @@
             });
             this.$wrapper.append(this.$spacer);
 
-            this.footerMarginTop = this.$footer.css('margin-top');
-            this.$footer.css({'margin-top': 0});
+            this.footerMarginTop = this.$element.css('margin-top');
+            this.$element.css({'margin-top': 0});
 
             $(window)
                 .on('load', this.setStickyFooter.bind(this))
@@ -45,7 +45,7 @@
         }
 
         setStickyFooter() {
-            var footerDims = Foundation.Box.GetDimensions(this.$footer);
+            var footerDims = Foundation.Box.GetDimensions(this.$element);
             this.$wrapper.css({'margin-bottom': (-footerDims.height) + 'px'});
             this.$spacer.css({'height': footerDims.height + 'px', 'margin-top': this.footerMarginTop});
         }
