@@ -31,7 +31,7 @@
             this.$wrapper = $('<div class="page-wrap">');
             this.$spacer = $('<div class="sticky-footer-space">');
             $('body').prepend(this.$wrapper);
-            $('body').find(' > *:not(footer):not(.page-wrap)').each(function (index, element) {
+            $('body').find(' > *:not(footer):not(.page-wrap):not(script)').each(function (index, element) {
                 $(element).detach().appendTo(_this.$wrapper);
             });
             this.$wrapper.append(this.$spacer);
